@@ -5,7 +5,7 @@ import dotenv from 'dotenv'
 
 dotenv.config();
 
-mongoose.connect(process.env.MONGO_CONNECT_DB);
+mongoose.connect(process.env.DATABASE_URL);
 
 export const db =  mongoose.connection;
 db.on('error' , console.error.bind('error inconnect db'));
