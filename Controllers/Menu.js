@@ -43,7 +43,7 @@ export const removeMenu = async (req, res) => {
   const { id } = req.params;
   try {
     await Menu.findByIdAndDelete(id);
-    res.json({ message: "Menu item deleted successfully" });
+    res.status(200).json({ message: "Menu item deleted successfully" });
   } catch (error) {
     res.status(500).json({ message: "Error deleting menu item", error });
   }
