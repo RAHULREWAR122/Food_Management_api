@@ -38,18 +38,6 @@ export const updateMenu = async (req, res) => {
     res.status(500).json({ message: "Error updating menu item", error });
   }
 };
-//   // Update a menu item
-//   app.put('/menu/:id', async (req, res) => {
-//     const { id } = req.params;
-//     const updates = req.body;
-
-//     try {
-//       const updatedMenuItem = await Menu.findByIdAndUpdate(id, updates, { new: true });
-//       res.json(updatedMenuItem);
-//     } catch (error) {
-//       res.status(500).json({ message: 'Error updating menu item', error });
-//     }
-//   });
 
 export const removeMenu = async (req, res) => {
   const { id } = req.params;
@@ -61,13 +49,3 @@ export const removeMenu = async (req, res) => {
   }
 };
 
-//   app.delete('/menu/:id', async (req, res) => {
-//     const { id } = req.params;
-
-//     try {
-//       await Menu.findByIdAndDelete(id);
-//       res.json({ message: 'Menu item deleted successfully' });
-//     } catch (error) {
-//       res.status(500).json({ message: 'Error deleting menu item', error });
-//     }
-//   });

@@ -12,7 +12,7 @@ import { addOrder, allOrders } from '../Controllers/Order.js';
 router.post("/api/register", register);
 router.post("/api/login", login);
 router.post("/api/addMenu", authenticateToken , addMenu);
-router.get("/api/allMenu", authenticateToken , allMenu);
+router.get("/api/allMenu" , allMenu);
 router.delete("/api/removeMenu/:id", authenticateToken ,removeMenu);
 router.put("/api/updateMenu/:id", authenticateToken ,updateMenu);
 
