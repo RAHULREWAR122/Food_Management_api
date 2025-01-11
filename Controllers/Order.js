@@ -58,18 +58,10 @@ export const addOrder = async (req, res) => {
 export const allOrders = async (req, res) => {
   try {
     const orders = await Order.find({ userId: req.user.userId }).populate(
-      "items.menuItemId"
+      "items"
     );
     res.json(orders);
   } catch (error) {
     res.status(500).json({ message: "Error fetching orders", error });
   }
 };
-//   app.get('/orders', authenticateToken, async (req, res) => {
-//     try {
-//       const orders = await Order.find({ userId: req.user.userId }).populate('items.menuItemId');
-//       res.json(orders);
-//     } catch (error) {
-//       res.status(500).json({ message: 'Error fetching orders', error });
-//     }
-//   });
